@@ -8,7 +8,7 @@
 
 [aria2官方下载地址](https://github.com/aria2/aria2/releases)
 
-[还有一个类似的(下载后请打开`docs`里面的index.html)]()
+[还有一个类似的(下载后请打开`docs`里面的index.html)](https://cxlblogxz.github.io/Aria2Ng/Aria2.zip)
 
 [或者直接打开](https://cxl2020mc.github.io/tp/AriaNg/AriaNg)
 
