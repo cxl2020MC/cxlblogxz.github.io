@@ -26,14 +26,19 @@ def getToday(cityName):
         # 获取最低温度
         low = forecast[0]['low']
         ganmao=weatherDict['data']['ganmao']
-        data={'msg':date+"\n"+city+"当前温度为："+wendu+"\n"+"当前天气:"+type+"\n"+"最"+high+"\n"+"最"+low+"\n"+ganmao,
+        
+        url = 'https://api.uixsj.cn/hitokoto/get?type=hitokoto&code=json'
+        response = requests.get(url)
+        weatherDict = response.json()
+        print(weatherDict)
+        content=weatherDict["type"]+"："+weatherDict['content']
+        
+        data={'msg':date+"\n"+city+"当前温度为："+wendu+"\n"+"当前天气:"+type+"\n"+"最"+high+"\n"+"最"+low+"\n"+ganmao+"\n"+content,
               'qq':'1176503930'}
     else:
         print('你输入的城市是错误的')
 getToday("龙岗区")
 
-
 url='https://qmsg.zendee.cn/send/bbf96ebf0f97910aebf213da6e5da097'
-
 r=requests.post(url,data=data)
 print(r.text)
